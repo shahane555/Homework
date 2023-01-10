@@ -1,8 +1,8 @@
 public class DoubleArray {
 
     public static void main(String[] args) {
-        double[] array = {-5, -7, -9, 3, -6};// {-3, 8, 7, 2, -1}
-        double[] negative = new double[array.length]; //8, 29, 0, 0, 0
+        double[] array = {-5, -7, -9, 3, -6};
+        double[] negative = new double[array.length];
         double[] positive = new double[array.length];
         int i = 0;
         int j = 0;
