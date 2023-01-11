@@ -1,4 +1,5 @@
-public class Homework3 {
+public class
+Trapezoid {
 
     public static void main(String[] args) {
 //      1st task
