@@ -4,7 +4,7 @@ public class DoubleArray {
         double[] array = {-5, -7, -9, 3, -6};
         double[] negative = new double[array.length];
         double[] positive = new double[array.length];
-        int i = 0;
+        int i = 2;
         int j = 0;
         if (array[0] >= 0) {
             positive[i] = array[0];
