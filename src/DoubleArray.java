@@ -1,5 +1,4 @@
 public class DoubleArray {
-
     public static void main(String[] args) {
         double[] array = {-5, -7, -9, 3, -6};
         double[] negative = new double[array.length];
