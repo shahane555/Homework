@@ -2,7 +2,7 @@
 public class Homework4 {
 
 
-
+    public static void main(String[] args) {
         //____________1st___________
         int x = 31;
         int y = 7;
