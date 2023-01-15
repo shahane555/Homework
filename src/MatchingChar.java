@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class matchingChar {
+public class MatchingChar {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         char enteredChar = sc.next().charAt(0);

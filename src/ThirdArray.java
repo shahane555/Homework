@@ -1,4 +1,4 @@
-public class thirdArray {
+public class ThirdArray {
     public static void main(String[] args) {
         int[] arr1 = {5, 30, -56, 4, -61, 8, -3, 0, 40, 29};
         int[] arr2 = {25, 2, 14, 3, 77, 18, 55, 1, -6, 31};
