@@ -1,24 +1,24 @@
 public class PrimeNumbersInArray {
     public static void main(String[] args) {
-        int[] array = {10, 11, 8, 9, 6, 7, 21, 25, 14, 29, 3, 4};
-        boolean isPrime = true;
+        int[] array = {11, 10, 19, 5, 7, 12, 77, 3, 55, 17, 70, 21, 33};
         int counter = 0;
         for (int i = 0; i < array.length; i++) {
+            boolean prime = true;
             for (int j = 2; j < array[i]; j++) {
                 if (array[i] % j == 0) {
-                    isPrime = false;
+                    prime = false;
                     break;
-                } else isPrime = true;
+                }
             }
-            if (isPrime) {
+            if (prime) {
                 System.out.print(array[i] + " ");
-                counter++;
-            }
+            } else counter++;
         }
-        if (counter == 0) {
+        if (counter == array.length) {
             System.out.println("There are no prime numbers in current array");
         }
     }
 }
+
 
 
