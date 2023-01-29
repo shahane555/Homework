@@ -1,3 +1,5 @@
+package Part1;
+
 public class PrimeNumbersInArray {
     public static void main(String[] args) {
         int[] array = {11, 10, 19, 5, 7, 12, 77, 3, 55, 17, 70, 21, 33};

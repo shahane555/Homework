@@ -1,3 +1,5 @@
+package Part1;
+
 public class AbsoluteValue {
     public static void main(String[] args) {
         int[] array = {62, -9, -2, 0, 14, -77, 25, 29, 14, 3, 11, -6, -8, 0};

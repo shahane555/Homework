@@ -1,3 +1,5 @@
+package Part1;
+
 public class FirstLastElement {
     public static void main(String[] args) {
         int[][] matrix = {

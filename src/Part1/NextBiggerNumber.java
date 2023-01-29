@@ -1,3 +1,5 @@
+package Part1;
+
 public class NextBiggerNumber {
     public static void main(String[] args) {
         int[] array = {12, 32, -9, 11, -1, 0, 1, 30, 12, 65, 9, 45, -9, 2, 29};

@@ -1,3 +1,5 @@
+package Part1;
+
 public class ThirdArray {
     public static void main(String[] args) {
         int[] arr1 = {5, 30, -56, 4, -61, 8, -3, 0, 40, 29};
