@@ -2,16 +2,13 @@ package Part2;
 
 public class Exponent {
     public static void main(String[] args) {
-        System.out.println(exponent(4, -2));
-        System.out.println(exponent(-3, 3));
-        System.out.println(exponent(5, 11));
-        System.out.println(exponent(14, -3));
-        System.out.println(exponent(7, 0));
-        System.out.println(exponent(10, -2));
-        System.out.println(exponent(0, -6));
-        System.out.println(exponent(7, 3));
+        double c = exponent(7, 2);
+        if (c == -1) {
+            System.out.println("Invalid case, at least one of the arguments is greater than 10");
+        }  else if (c == -2) {
+            System.out.println("Invalid case, first argument should be greater than 0");
+        } else System.out.println("c = " + c);
     }
-
     static double exponent(int a, int b) {
         if (a > 10 || -a > 10 || b > 10 || -b > 10) {
             return -1;
