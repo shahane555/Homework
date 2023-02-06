@@ -14,7 +14,7 @@ public class Methods {
             System.out.println("The text is empty");
         } else if (num2 == -1) {
             System.out.println("No matches of the word \"string\" are found in the text");
-        } else  System.out.println("A word \"string\" repeats in the text " + num2 + " times");
+        } else System.out.println("A word \"string\" repeats in the text " + num2 + " times");
     }
 
     static int countOfCurrentWord(String first, String second) {
