@@ -1,6 +1,6 @@
 package Part2;
 
-public class NewHome {
+public class Methods {
 
     public static void main(String[] args) {
         int num1 = countOfCurrentWord("", "word");
@@ -9,16 +9,12 @@ public class NewHome {
             System.out.println("Current word is missing or the text is empty");
         } else if (num1 == -1) {
             System.out.println("No matches of the current word are found in the text");
-        } else {
-            System.out.println("Current word repeats in the text " + num1 + " times");
-        }
+        } else System.out.println("Current word repeats in the text " + num1 + " times");
         if (num2 == -2) {
             System.out.println("The text is empty");
         } else if (num2 == -1) {
             System.out.println("No matches of the word \"string\" are found in the text");
-        } else {
-            System.out.println("A word \"string\" repeats in the text " + num2 + " times");
-        }
+        } else  System.out.println("A word \"string\" repeats in the text " + num2 + " times");
     }
 
     static int countOfCurrentWord(String first, String second) {
