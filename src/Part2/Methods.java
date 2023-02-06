@@ -34,19 +34,7 @@ public class Methods {
     }
 
     static int countOfCurrentWord(String oneParameter) {
-        String[] stringarr = oneParameter.split(" ");
-        int count = 0;
-        if (oneParameter.length() == 0) {
-            return -2;
-        } else {
-            for (int i = 0; i < stringarr.length; i++) {
-                if (stringarr[i].equals("string")) {
-                    count++;
-                }
-            }
-            if (count == 0) return -1;
-            return count;
+        return countOfCurrentWord(oneParameter, "string");
         }
     }
 
-}
