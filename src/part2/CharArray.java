@@ -14,7 +14,6 @@ public class CharArray {
             System.out.print(charArr[i] + " ");
     }
 
-
     static int[] charToInt(char... c) {
         int[] arr = new int[c.length];
         for (int i = 0; i < c.length; i++) {
