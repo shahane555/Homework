@@ -1,4 +1,4 @@
-package Part2;
+package part2;
 
 public class PascalsTriangle {
     public static void main(String[] args) {
@@ -28,6 +28,8 @@ public class PascalsTriangle {
 
     }
 
+    private static class Strings {
+    }
 }
 
 
