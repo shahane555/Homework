@@ -1,4 +1,4 @@
-package Part2;
+package part2;
 
 public class Eratosthene {
     public static void main(String[] args) {

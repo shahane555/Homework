@@ -1,4 +1,4 @@
-package Part2;
+package part2;
 
 public class Armstrong {
     public static void main(String[] args) {
@@ -31,5 +31,8 @@ public class Armstrong {
             result += pow;
         }
         return result == a;
+    }
+
+    private static class Strings {
     }
 }

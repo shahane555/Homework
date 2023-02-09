@@ -1,4 +1,4 @@
-package Part1;
+package part1;
 
 public class FirstLastElement {
     public static void main(String[] args) {

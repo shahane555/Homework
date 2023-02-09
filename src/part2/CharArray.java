@@ -1,6 +1,6 @@
 package part2;
 
-public class Char {
+public class CharArray {
     public static void main(String[] args) {
         int[] intArr = charToInt('a', '4', 'k', 'K');
         char[] charArr = intToChar(97, 52, 107, 75);

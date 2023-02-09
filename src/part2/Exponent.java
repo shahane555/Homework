@@ -1,4 +1,4 @@
-package Part2;
+package part2;
 
 public class Exponent {
     public static void main(String[] args) {
@@ -24,5 +24,8 @@ public class Exponent {
             }
             return mult;
         }
+    }
+
+    private static class Strings {
     }
 }
