@@ -3,7 +3,7 @@ package part2;
 public class Sport {
     public static void main(String[] args) {
         Sportsman sportsman1 = new Sportsman(55, 63, 95, 84, 70);
-        Sportsman sportsman2 = new Sportsman(54, 55, 80, 94, 100, 88, 70);
+        Sportsman sportsman2 = new Sportsman(84, 55, 80, 94, 100, 88, 70);
         Sportsman sportsman3 = new Sportsman(50, 60, 70);
         Sportsman sportsman4 = new Sportsman(55, 55);
         System.out.println("Average points collected by the sportsmans below are ");

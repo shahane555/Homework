@@ -2,7 +2,7 @@ package part2;
 
 public class GasStove {
     public static void main(String[] args) {
-        Stove newStove = new Stove(1, 3, "Glass", "Electrolux");
+        Stove newStove = new Stove(2, 3, "Glass", "Electrolux");
         newStove.electricBurnerOn = true;
         newStove.gasBurnerOn = true;
         if (newStove.getGasStoveEnergy() == 0) {
