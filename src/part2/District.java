@@ -29,8 +29,6 @@ class Building {
     Building(String buildingType, int floors) {
         setFloors(floors);
         setBuildingType(buildingType);
-        twoRooms = new int[getFloors() * 4 / 2];
-        threeRooms = new int[getFloors() * 4 / 2];
     }
 
     public void setBuildingType(String string) {
@@ -40,10 +38,6 @@ class Building {
             System.out.println("One of your inputs is invalid!");
             System.exit(1);
         }
-    }
-
-    public String getBuildingType() {
-        return buildingType;
     }
 
 
@@ -57,7 +51,7 @@ class Building {
     }
 
     public void setTwoRooms(int... twoRooms) {
-        for (int i = 0; i < twoRooms.length - 1; i++) {               // 9, 13, 23, 4, 6
+        for (int i = 0; i < twoRooms.length - 1; i++) {
             for (int j = i + 1; j < twoRooms.length; j++) {
                 if (twoRooms[i] > 0 && twoRooms[i] <= getFloors() * 4 && twoRooms[i] != twoRooms[j]) {
                     continue;
@@ -74,7 +68,7 @@ class Building {
     }
 
     public void setThreeRooms(int... threeRooms) {
-        for (int i = 0; i < threeRooms.length - 1; i++) {               // 9 13 23 4 6
+        for (int i = 0; i < threeRooms.length - 1; i++) {
             for (int j = i + 1; j < threeRooms.length; j++) {
                 if (threeRooms[i] > 0 && threeRooms[i] <= getFloors() * 4 && threeRooms[i] != threeRooms[j]) {
                     continue;
@@ -89,7 +83,7 @@ class Building {
     public int[] getThreeRooms() {
         return threeRooms;
     }
-    
+
 }
 
 class District2 {
@@ -110,9 +104,6 @@ class District2 {
         }
     }
 
-    public double getAreaOfGarden() {
-        return areaOfGarden;
-    }
 
     public double unitGardenArea() {
         double result = 0;
