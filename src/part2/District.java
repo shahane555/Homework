@@ -16,113 +16,109 @@ public class District {
 
         District2 yeraz = new District2(600, b1, b2);
         System.out.println(yeraz.unitGardenArea());
-
-        //   int apartmentsCount = b1.getTwoRooms().length + b2.getThreeRooms().length;
-
     }
 }
-     class Building {
-        private int floors;
-        private int[] twoRooms;
-        private int[] threeRooms;
-        private String buildingType;
+
+class Building {
+    private int floors;
+    private int[] twoRooms;
+    private int[] threeRooms;
+    private String buildingType;
 
 
-        Building(String buildingType, int floors) {
-            setFloors(floors);
-            setBuildingType(buildingType);
-            twoRooms = new int[getFloors() * 4 / 2];
-            threeRooms = new int[getFloors() * 4 / 2];
+    Building(String buildingType, int floors) {
+        setFloors(floors);
+        setBuildingType(buildingType);
+        twoRooms = new int[getFloors() * 4 / 2];
+        threeRooms = new int[getFloors() * 4 / 2];
+    }
+
+    public void setBuildingType(String string) {
+        if (string.equals("Panel") || string.equals("Monolithic")) {
+            this.buildingType = string;
+        } else {
+            System.out.println("One of your inputs is invalid!");
+            System.exit(1);
         }
+    }
 
-        public void setBuildingType(String string) {
-            if (string.equals("Panel") || string.equals("Monolithic")) {
-                this.buildingType = string;
-            } else {
+    public String getBuildingType() {
+        return buildingType;
+    }
+
+
+    public void setFloors(int floors) {
+        if (floors >= 4 && floors <= 6)
+            this.floors = floors;
+    }
+
+    public int getFloors() {
+        return floors;
+    }
+
+    public void setTwoRooms(int... twoRooms) {
+        for (int i = 0; i < twoRooms.length - 1; i++) {               // 9, 13, 23, 4, 6
+            for (int j = i + 1; j < twoRooms.length; j++) {
+                if (twoRooms[i] > 0 && twoRooms[i] <= getFloors() * 4 && twoRooms[i] != twoRooms[j]) {
+                    continue;
+                }
                 System.out.println("One of your inputs is invalid!");
                 System.exit(1);
             }
         }
-
-        public String getBuildingType() {
-            return buildingType;
-        }
-
-
-        public void setFloors(int floors) {
-            if (floors >= 4 && floors <= 6)
-                this.floors = floors;
-        }
-
-        public int getFloors() {
-            return floors;
-        }
-
-        public void setTwoRooms(int... twoRooms) {
-            for (int i = 0; i < twoRooms.length - 1; i++) {               // 9, 13, 23, 4, 6
-                for (int j = i + 1; j < twoRooms.length; j++) {
-                    if (twoRooms[i] > 0 && twoRooms[i] <= getFloors() * 4 && twoRooms[i] != twoRooms[j]) {
-                        continue;
-                    }
-                    System.out.println("One of your inputs is invalid!");
-                    System.exit(1);
-                }
-            }
-            this.twoRooms = twoRooms;
-        }
-
-        public int[] getTwoRooms() {
-            return twoRooms;
-        }
-
-        public void setThreeRooms(int... threeRooms) {
-            for (int i = 0; i < threeRooms.length - 1; i++) {               // 9 13 23 4 6
-                for (int j = i + 1; j < threeRooms.length; j++) {
-                    if (threeRooms[i] > 0 && threeRooms[i] <= getFloors() * 4 && threeRooms[i] != threeRooms[j]) {
-                        continue;
-                    }
-                    System.out.println("One of your inputs is invalid!");
-                    System.exit(1);
-                }
-            }
-            this.threeRooms = threeRooms;
-        }
-
-        public int[] getThreeRooms() {
-            return threeRooms;
-
-        }
-
+        this.twoRooms = twoRooms;
     }
 
-     class District2 {
-        private double areaOfGarden;
-        Building[] buildings;
+    public int[] getTwoRooms() {
+        return twoRooms;
+    }
 
-        District2(double areaOfGarden, Building... buildings) {
-            setAreaOfGarden(areaOfGarden);
-            this.buildings = buildings;
-        }
-
-        public void setAreaOfGarden(double areaOfGarden) {
-            if (areaOfGarden > 50 && areaOfGarden <= 1000) {
-                this.areaOfGarden = areaOfGarden;
-            } else {
+    public void setThreeRooms(int... threeRooms) {
+        for (int i = 0; i < threeRooms.length - 1; i++) {               // 9 13 23 4 6
+            for (int j = i + 1; j < threeRooms.length; j++) {
+                if (threeRooms[i] > 0 && threeRooms[i] <= getFloors() * 4 && threeRooms[i] != threeRooms[j]) {
+                    continue;
+                }
                 System.out.println("One of your inputs is invalid!");
                 System.exit(1);
             }
         }
+        this.threeRooms = threeRooms;
+    }
 
-        public double getAreaOfGarden() {
-            return areaOfGarden;
-        }
+    public int[] getThreeRooms() {
+        return threeRooms;
+    }
+}
 
-        public double unitGardenArea() {
-            double result = 0;
-            for (int i = 0; i < buildings.length; i++) {
-                result += buildings[i].getTwoRooms().length + buildings[i].getThreeRooms().length;
-            }
-            return (double) (areaOfGarden / result);
+class District2 {
+    private double areaOfGarden;
+    Building[] buildings;
+
+    District2(double areaOfGarden, Building... buildings) {
+        setAreaOfGarden(areaOfGarden);
+        this.buildings = buildings;
+    }
+
+    public void setAreaOfGarden(double areaOfGarden) {
+        if (areaOfGarden > 50 && areaOfGarden <= 1000) {
+            this.areaOfGarden = areaOfGarden;
+        } else {
+            System.out.println("One of your inputs is invalid!");
+            System.exit(1);
         }
     }
+
+    public double getAreaOfGarden() {
+        return areaOfGarden;
+    }
+
+    public double unitGardenArea() {
+        double result = 0;
+        for (int i = 0; i < buildings.length; i++) {
+            result += buildings[i].getTwoRooms().length + buildings[i].getThreeRooms().length;
+        }
+        return (double) (areaOfGarden / result);
+    }
+}
 
