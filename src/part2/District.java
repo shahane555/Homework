@@ -89,6 +89,7 @@ class Building {
     public int[] getThreeRooms() {
         return threeRooms;
     }
+    
 }
 
 class District2 {
