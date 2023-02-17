@@ -11,6 +11,7 @@ public class Sport {
         for (int i = 0; i < arr.length; i++) {
             System.out.println("Sportsman No" + (i + 1) + " " + arr[i]);
         }
+        System.out.println(sportsman1.compareAveragePoints(sportsman1.getAverageOfPoints(), sportsman2.getAverageOfPoints()));
     }
 }
 
@@ -18,6 +19,7 @@ class Sportsman {
     private int[] collectedPoints;
 
     Sportsman(int... collectedPoints) {
+
         setCollectedPoints(collectedPoints);
     }
 
@@ -42,5 +44,14 @@ class Sportsman {
             result += collectedPoints[i];
         }
         return result / collectedPoints.length;
+    }
+
+    public int compareAveragePoints(double points1, double points2) {
+        if (points1 > points2) {
+            return 1;
+        } else if (points1 < points2) {
+            return -1;
+        }
+        return 0;
     }
 }
