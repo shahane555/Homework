@@ -18,12 +18,10 @@ public class GreatestCommonDivisor {
                     continue;
                 }
             }
-            if(count == arr.length) {
+            if (count == arr.length) {
                 greatestCommonDivisor = i;
             }
         }
         System.out.println("Greatest common divisor is " + greatestCommonDivisor);
     }
-
-
 }
