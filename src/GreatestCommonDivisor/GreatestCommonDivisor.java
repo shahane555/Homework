@@ -6,7 +6,7 @@ public class GreatestCommonDivisor {
         System.out.println("Greatest common divisor for the current numbers is " + greatestCommonDivisor(arr));
     }
 
-    static int greatestCommonDivisor(int... arr) {
+    public static int greatestCommonDivisor(int... arr) {
         int min = 2147483647; //max value for a variable of type int
         int greatestCommonDivisor = 1;
         for (int i : arr) {
