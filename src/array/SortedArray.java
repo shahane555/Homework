@@ -17,10 +17,8 @@ public class SortedArray {
             }
             for (int k = copyOfRepeatedNumbers; k < copyOfRepeatedNumbers + repeatedNumbers; k++) {
                 sortedArray[k] = arr[i];
+                System.out.print(sortedArray[k] + " ");
             }
-        }
-        for (int i = 0; i < sortedArray.length; i++) {
-            System.out.print(sortedArray[i] + " ");
         }
     }
 }
