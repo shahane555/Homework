@@ -2,7 +2,7 @@ package array;
 
 public class SortedArray {
     public static void main(String[] args) {
-        int[] array = {-23, 5, 12, 5, 5, -23, 12, 5, 12, -23, 5, 5, 12, 5, -23, 12, 12, -23};
+        int[] array = {12, -23, 5, 12, 5, 5, -23, 12, 5, 12, -23, 5, 5, 12, 5, -23, 12, 12, -23};
         int[] sortedArray = new int[array.length];
         int[] arr = {-23, 5, 12};
         int repeatedNumbers = 0;
