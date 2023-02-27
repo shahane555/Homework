@@ -24,10 +24,6 @@ public class RealMadrid {
     };
 
     public RealMadrid(String nameSurname, String nationality, String position) {
-        setParameters(nameSurname, nationality, position);
-    }
-
-    private void setParameters(String nameSurname, String nationality, String position) {
         int count = 0;
         for (int i = 0; i < str.length; i++) {
             if (nameSurname.equals(str[i][0]) && nationality.equals(str[i][1]) && position.equals(str[i][2])) {
@@ -54,6 +50,18 @@ public class RealMadrid {
     public String getPosition() {
         return position;
     }
+
+    public static void main(String[] args) {
+        RealMadrid player1 = new RealMadrid("Thibaut Courtois", "Belgian", "Goalkeeper");
+        RealMadrid player2 = new RealMadrid("Dani Carvajal", "Spanish", "Defender");
+        RealMadrid player3 = new RealMadrid("Eder Militao", "Brasilian", "Defender");
+        RealMadrid player4 = new RealMadrid("David Alaba", "Austrian", "Defender");
+        System.out.println(player1.getNationality());
+        System.out.println(player2.getPosition());
+        System.out.println(player3.getNameSurname());
+        System.out.println(player4.getNameSurname());
+
+    } 
 }
 
 
