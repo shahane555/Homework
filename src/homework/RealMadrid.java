@@ -24,19 +24,18 @@ public class RealMadrid {
     };
 
     public RealMadrid(String nameSurname, String nationality, String position) {
-        setNameSurname(nameSurname);
-        setNationality(nationality);
-        setPosition(position);
+        setParameters(nameSurname, nationality, position);
     }
 
-    private void setNameSurname(String nameSurname) {
+    private void setParameters(String nameSurname, String nationality, String position) {
         int count = 0;
         for (int i = 0; i < str.length; i++) {
-            if (nameSurname.equals(str[i][0])) {
+            if (nameSurname.equals(str[i][0]) && nationality.equals(str[i][1]) && position.equals(str[i][2])) {
                 this.nameSurname = nameSurname;
+                this.nationality = nationality;
+                this.position = position;
                 break;
-            }
-            count++;
+            } else count++;
         }
         if (count == str.length) {
             System.out.println("Invalid input");
@@ -48,53 +47,15 @@ public class RealMadrid {
         return nameSurname;
     }
 
-    private void setNationality(String nationality) {
-        int count = 0;
-        for (int i = 0; i < str.length; i++) {
-            if (nationality.equals(str[i][1])) {
-                this.nationality = nationality;
-                break;
-            } else count++;
-        }
-        if (count == str.length) {
-            System.out.println("Invalid input");
-            System.exit(1);
-        }
-    }
-
     public String getNationality() {
         return nationality;
-    }
-
-    private void setPosition(String position) {
-        int count = 0;
-        for (int i = 0; i < str.length; i++) {
-            if (position.equals(str[i][2])) {
-                this.position = position;
-                break;
-            } else count++;
-        }
-        if (count == str.length) {
-            System.out.println("Invalid input");
-            System.exit(1);
-        }
     }
 
     public String getPosition() {
         return position;
     }
-
-    public static void main(String[] args) {
-        RealMadrid player1 = new RealMadrid("Thibaut Courtois",  "Belgian", "Goalkeeper");
-        RealMadrid player2 = new RealMadrid("Dani Carvajal", "Spanish","Defender");
-        RealMadrid player3 = new RealMadrid("Eder Militao", "Brasilian","Defender");
-        RealMadrid player4 = new RealMadrid("David Alaba", "Austrian","Defender");
-        System.out.println(player1.getNationality());
-        System.out.println(player2.getPosition());
-        System.out.println(player3.getNameSurname());
-        System.out.println(player4.getNameSurname());
-    }
 }
+
 
 
 
