@@ -1,42 +1,14 @@
 package homework;
 
-public class RealMadrid {
-    private static String league = "La Liga";
-    private static String ground = "Santiago Bernabeu";
-    private static String president = "Florentino Perez";
-    private static String headCoach = "Carlo Ancelotti";
+ class Player {
     private String position;
     private String nationality;
     private String nameSurname;
-    String[][] str = {
-            {"Thibaut Courtois", "Belgian", "Goalkeeper"},
-            {"Dani Carvajal", "Spanish", "Defender"},
-            {"Eder Militao", "Brasilian", "Defender"},
-            {"David Alaba", "Austrian", "Defender"},
-            {"Jesus Vallejo", "Spanish", "Defender"},
-            {"Nacho", "Spanish", "Defender"},
-            {"Eden Hazard", "Belgian", "Attacker"},
-            {"Toni Kroos", "German", "Midfielder"},
-            {"Karim Benzema", "French", "Attacker"},
-            {"Luka Modric", "Croatian", "Midfielder"},
-            {"Marco Asensio", "Spanish", "Attacker"},
-            {"Eduardo Camavinga", "French", "Midfielder"}
-    };
 
-    public RealMadrid(String nameSurname, String nationality, String position) {
-        int count = 0;
-        for (int i = 0; i < str.length; i++) {
-            if (nameSurname.equals(str[i][0]) && nationality.equals(str[i][1]) && position.equals(str[i][2])) {
-                this.nameSurname = nameSurname;
-                this.nationality = nationality;
-                this.position = position;
-                break;
-            } else count++;
-        }
-        if (count == str.length) {
-            System.out.println("Invalid input");
-            System.exit(1);
-        }
+    private Player(String nameSurname, String nationality, String position) {
+        this.nameSurname = nameSurname;
+        this.nationality = nationality;
+        this.position = position;
     }
 
     public String getNameSurname() {
@@ -51,18 +23,35 @@ public class RealMadrid {
         return position;
     }
 
-    public static void main(String[] args) {
-        RealMadrid player1 = new RealMadrid("Thibaut Courtois", "Belgian", "Goalkeeper");
-        RealMadrid player2 = new RealMadrid("Dani Carvajal", "Spanish", "Defender");
-        RealMadrid player3 = new RealMadrid("Eder Militao", "Brasilian", "Defender");
-        RealMadrid player4 = new RealMadrid("David Alaba", "Austrian", "Defender");
-        System.out.println(player1.getNationality());
-        System.out.println(player2.getPosition());
-        System.out.println(player3.getNameSurname());
-        System.out.println(player4.getNameSurname());
-
-    } 
+    static Player n1 = new Player("Thibaut Courtois", "Belgian", "Goalkeeper");
+    static Player n2 = new Player("Dani Carvajal", "Spanish", "Defender");
+    static Player n3 = new Player("Eder Militao", "Brasilian", "Defender");
+    static Player n4 = new Player("David Alaba", "Austrian", "Defender");
+    static Player n5 = new Player("Jesus Vallejo", "Spanish", "Defender");
+    static Player n6 = new Player("Nacho", "Spanish", "Defender");
+    static Player n7 = new Player("Eden Hazard", "Belgian", "Attacker");
+    static Player n8 = new Player("Toni Kroos", "German", "Midfielder");
+    static Player n9 = new Player("Karim Benzema", "French", "Attacker");
+    static Player n10 = new Player("Luka Modric", "Croatian", "Midfielder");
+    static Player n11 = new Player("Marco Asensio", "Spanish", "Attacker");
 }
+
+public class RealMadrid {
+
+//    private static final String league = "La Liga";
+//    private static final String ground = "Santiago Bernabeu";
+//    private static String president = "Florentino Perez";
+//    private static String headCoach = "Carlo Ancelotti";
+
+    public static void main(String[] args) {
+        System.out.println(Player.n1.getNameSurname());
+        System.out.println(Player.n5.getNationality());
+        System.out.println(Player.n8.getPosition());
+    }
+}
+
+
+
 
 
 
