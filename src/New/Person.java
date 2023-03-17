@@ -1,18 +1,18 @@
 package New;
 
 public class Person {
-    public String name;
-    public String surname;
-    public int age;
-    public String address;
-    public int phoneNumber;
-}
+    private String name;
+    private String surname;
+    private int age;
+    private String address;
+    private int phoneNumber;
 
-class Employee extends Person {
-    public String specialization;
-    public int salary;
-}
+    Person(String name, String surname, int age, String address, int phoneNumber) {
+        this.name = name;
+        this.surname = surname;
+        this.age = age;
+        this.address = address;
+        this.phoneNumber = phoneNumber;
+    }
 
-class Manager extends Employee {
-    public String Department;
 }
