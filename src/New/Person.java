@@ -10,9 +10,33 @@ public class Person {
     Person(String name, String surname, int age, String address, int phoneNumber) {
         this.name = name;
         this.surname = surname;
-        this.age = age;
+        setAge(age);
         this.address = address;
-        this.phoneNumber = phoneNumber;
+       setPhoneNumber(phoneNumber);
     }
 
+    public void setAge(int age) {
+        if(age >= 0 && age <= 100) {
+            this.age = age;
+        } else {
+            System.out.println("Invalid input");
+            System.exit(1);
+        }
+    }
+    public int getAge() {
+        return age;
+    }
+
+    public void setPhoneNumber(int phoneNumber) {
+        if(phoneNumber >= 10000000 && phoneNumber <= 99000000) {
+            this.phoneNumber = phoneNumber;
+        } else {
+            System.out.println("Invalid input");
+            System.exit(1);
+        }
+    }
+
+    public int getPhoneNumber() {
+        return phoneNumber;
+    }
 }
