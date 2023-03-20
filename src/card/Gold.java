@@ -11,4 +11,13 @@ public class Gold extends Card {
     public int getAmountForLunch() {
         return amountForLunch;
     }
+
+    public void paymentForLunch(int payment) {
+        if (payment > 0 && payment <= amountForLunch) {
+            amountForLunch -= payment;
+        } else {
+            System.out.println("Error!");
+            System.exit(1);
+        }
+    }
 }
