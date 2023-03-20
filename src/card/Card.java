@@ -5,7 +5,6 @@ public class Card {
     private String code;
     private int amount;
 
-
     Card(String cardHoldersName, String code, int amount) {
         setCardHoldersName(cardHoldersName);
         setCode(code);
@@ -41,13 +40,13 @@ public class Card {
         }
     }
 
-    public void addMoney (int money) {
-        if (money > 0 ) {
+    public void addMoney(int money) {
+        if (money > 0) {
             amount += money;
         }
     }
 
-    public void getMoney (int money) {
+    public void getMoney(int money) {
         if (money > 0 && money <= amount) {
             amount -= money;
         }
