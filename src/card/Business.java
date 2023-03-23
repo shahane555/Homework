@@ -3,8 +3,8 @@ package card;
 public class Business extends Card {
     private int count;
 
-    public Business(String cardHoldersName, String code, int amount) {
-        super(cardHoldersName, code, amount);
+    public Business(String cardHoldersName, String code, int amount, int expirationYear) {
+        super(cardHoldersName, code, amount, expirationYear);
     }
 
     public void setAMillion() {
@@ -14,6 +14,12 @@ public class Business extends Card {
             System.out.println("Error!");
             System.exit(1);
         }
+    }
+
+    @Override
+    public void onlinePurchase(double payment) {
+        super.onlinePurchase(payment);
+        setAmount(getAmount() + payment * 0.1);
     }
 }
 
