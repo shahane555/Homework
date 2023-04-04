@@ -21,10 +21,11 @@ public abstract class ElectronicDevices {
         return sellingPrice - costPrice;
     }
 
-    public void payWithCard(Card ob) {
-        if (ob.getAmount() > 0 && ob.getAmount() <= sellingPrice) {
+    public double payWithCard(Card ob) {
+        if (ob.getAmount() > 0 && ob.getAmount() >= sellingPrice) {
             ob.setAmount(ob.getAmount() - sellingPrice);
         }
+        return ob.getAmount();
     }
 
     public static double totalIncome(ElectronicDevices... devices) {
@@ -32,6 +33,7 @@ public abstract class ElectronicDevices {
         for (ElectronicDevices d : devices) {
             sum += d.earning();
         }
+        System.out.println("Total income ");
         return sum;
     }
 
