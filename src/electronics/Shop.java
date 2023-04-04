@@ -1,7 +1,6 @@
 package electronics;
 
 import card.Gold;
-import card.Cards;
 
 public class Shop {
     public static void main(String[] args) {
