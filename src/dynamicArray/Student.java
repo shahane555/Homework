@@ -6,13 +6,7 @@ public class Student {
 
     public Student(String name, int age) {
         this.name = name;
-        setAge(age);
-    }
-
-    public void setAge(int age) {
-        if (age >= 17) {
-            this.age = age;
-        } else throw new AgeException();
+        this.age = age;
     }
 
     @Override
